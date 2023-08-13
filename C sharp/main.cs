@@ -13,7 +13,7 @@ namespace Yooo
             //year = int.Parse(Console.ReadLine());
             if (int.TryParse(Console.ReadLine(), out year))
             {
-                if (!((year % 4 == 0 && year % 100 != 0) || year % 400 == 0))
+                if (!((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)) //Chia hết cho 4 nhưng không chia hết cho 100 hoặc chia hết cho 400
                 {
                     Console.WriteLine("{0} isn't a leap year.", year);
                 }
