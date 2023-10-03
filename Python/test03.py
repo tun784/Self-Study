@@ -24,7 +24,7 @@ def AI_Function(prompt):
         robot_AI = "I can't hear what did you say, try again."
     elif "hello" in prompt or "hi" in prompt or "lo" in prompt:
         robot_AI = "Hello guys."
-    elif "today" in prompt or "day" in prompt:
+    elif "today" in prompt or "day" in prompt or "date" in prompt:
         today = date.today()
         robot_AI = today.strftime("%B %d, %Y")
     elif "time" in prompt or "now" in prompt:
