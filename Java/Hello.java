@@ -42,5 +42,6 @@ public class Hello {
 		System.out.print("What's your name: ");
 		String name = scan.nextLine();
 		System.out.println("Hello " + name + " !");
+		scan.close();
 	}
 }
