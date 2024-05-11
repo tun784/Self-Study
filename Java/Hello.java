@@ -9,19 +9,15 @@ public class Hello {
 		double numF = (double)numA / numB;
 		System.out.println(numA + " and " + numB + ": " + numC + " " + numD + " " + numE + " " + numF);
 
-
 		int age = 18;
-		if (age >= 18) {
+		if (age >= 18)
 			System.out.println("You are an adult");
-		}
-		else{
+		else
 			System.out.println("You are a child");
-		}
 
 		int i;
-		for (i = 0; i < 5; i++){
+		for (i = 0; i < 5; i++)
 			System.out.print(i + "-");
-		}
 		System.out.println("");
 
 		i = 0;
