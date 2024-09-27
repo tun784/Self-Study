@@ -1,0 +1,31 @@
+function graphColoring(graph, color)
+    // Kiểm tra nếu tất cả các đỉnh đã được tô màu
+    if all vertices are colored
+        return true
+
+    // Lấy một đỉnh chưa được tô màu
+    v = select an uncolored vertex
+
+    // Thử tô màu cho đỉnh v với tất cả các màu có thể
+    for each color c in color
+        // Kiểm tra xem việc tô màu c cho đỉnh v có hợp lệ không (không có đỉnh kề nào cùng màu)
+        if isSafe(v, c, color)
+            // Tô màu c cho đỉnh v
+            color[v] = c
+
+            // Gọi đệ quy để tô màu cho các đỉnh còn lại
+            if graphColoring(graph, color)
+                return true
+
+            // Nếu không tìm được cách tô màu hợp lệ, gỡ màu c khỏi đỉnh v (backtrack)
+            color[v] = -1
+
+    // Nếu không tìm được màu nào hợp lệ cho đỉnh v, trả về false
+    return false
+
+function isSafe(v, c, color)
+    // Kiểm tra xem có đỉnh kề nào của v có màu c không
+    for each adjacent vertex u of v
+        if color[u] == c
+            return false
+    return true
