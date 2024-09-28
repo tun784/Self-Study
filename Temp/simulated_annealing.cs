@@ -10,7 +10,7 @@ namespace SA
             int numCities = 10;
             double[,] distances = GenerateRandomDistances(numCities);
             int[] bestRoute = SimulatedAnnealing(distances, numCities, 10000.0, 0.99, 1000);
-            
+
             Console.WriteLine("Best route found:");
             foreach (var city in bestRoute)
             {
@@ -18,7 +18,6 @@ namespace SA
             }
             Console.WriteLine();
         }
-
         static double[,] GenerateRandomDistances(int numCities)
         {
             Random rand = new Random();
@@ -35,7 +34,6 @@ namespace SA
             }
             return distances;
         }
-
         static int[] SimulatedAnnealing(double[,] distances, int numCities, double startTemp, double alpha, int maxIter)
         {
             Random rand = new Random();
@@ -62,7 +60,6 @@ namespace SA
 
             return bestRoute;
         }
-
         static int[] GenerateInitialRoute(int numCities)
         {
             int[] route = new int[numCities];
@@ -72,7 +69,6 @@ namespace SA
             }
             return route;
         }
-
         static void SwapCities(int[] route, int i, int j)
         {
             int temp = route[i];
