@@ -54,7 +54,6 @@ namespace SA
                     bestDistance = newDistance;
                     bestRoute = (int[])currentRoute.Clone();
                 }
-
                 currentTemp *= alpha;
             }
 
